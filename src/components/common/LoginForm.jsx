@@ -4,8 +4,7 @@ import { useSignIn } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Mail, Lock } from 'lucide-react'
-
-const neoInset = "bg-gray-100 border-none shadow-[inset_4px_4px_8px_#d1d1d1,inset_-4px_-4px_8px_#ffffff] focus-visible:ring-0"
+import { neoInset } from '@/lib/styles'
 
 export default function LoginForm() {
   const [email, setEmail] = useState('')
