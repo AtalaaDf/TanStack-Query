@@ -6,7 +6,8 @@ import SkillsCard from '@/components/common/SkillsCard'
 import ProjectsCard from '@/components/common/ProjectsCard'
 import ContactCard from '@/components/common/ContactCard'
 import { Button } from '@/components/ui/button'
-import { LogOut } from 'lucide-react'
+import { Link } from 'react-router'
+import { LogOut, ShieldCheck } from 'lucide-react'
 
 export default function DashboardPage() {
   const { user } = useAuthContext()
@@ -23,7 +24,14 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-8">
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-end items-center gap-2 mb-4">
+        {profile.role === 'admin' && (
+          <Button variant="ghost" asChild className="text-gray-500 gap-2">
+            <Link to="/admin">
+              <ShieldCheck className="w-4 h-4" /> Admin Panel
+            </Link>
+          </Button>
+        )}
         <Button variant="ghost" onClick={() => signOut.mutate()} className="text-gray-500 gap-2">
           <LogOut className="w-4 h-4" /> Logout
         </Button>
