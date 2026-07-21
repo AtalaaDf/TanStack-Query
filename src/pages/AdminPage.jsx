@@ -19,7 +19,7 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-4 md:p-8">
       <div className="flex items-center justify-between max-w-5xl mx-auto mb-6">
         <Button variant="ghost" asChild className="text-gray-500 gap-2">
           <Link to="/dashboard">
@@ -35,7 +35,7 @@ export default function AdminPage() {
         </Button>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
         {profiles.map((profile) => (
           <UserListItem
             key={profile.id}

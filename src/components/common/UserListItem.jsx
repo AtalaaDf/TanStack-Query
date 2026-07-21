@@ -7,7 +7,7 @@ export default function UserListItem({ fullName, birthDate, role, skillsCount })
     : '-'
 
   return (
-    <BentoCard className="flex flex-col gap-3">
+    <BentoCard className="flex flex-col gap-3 hover:shadow-[6px_6px_12px_#d1d1d1,-6px_-6px_12px_#ffffff] transition-shadow">
       <div className="flex items-center justify-between">
         <div className="rounded-full bg-gray-100 p-3 shadow-[4px_4px_8px_#d1d1d1,-4px_-4px_8px_#ffffff]">
           <User className="w-5 h-5 text-gray-600" />

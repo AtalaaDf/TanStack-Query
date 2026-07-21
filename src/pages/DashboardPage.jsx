@@ -23,7 +23,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-4 md:p-8">
       <div className="flex justify-end items-center gap-2 mb-4">
         {profile.role === 'admin' && (
           <Button variant="ghost" asChild className="text-gray-500 gap-2">
@@ -37,7 +37,7 @@ export default function DashboardPage() {
         </Button>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 max-w-5xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-5xl mx-auto">
         <div className="col-span-2 row-span-2">
           <ProfileCard fullName={profile.full_name} birthDate={profile.birth_date} />
         </div>
